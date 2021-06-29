@@ -1,0 +1,64 @@
+// C++ code
+//
+#include <Servo.h>
+
+Servo servo_2;
+Servo servo_3;
+Servo servo_4;
+Servo servo_5;
+Servo servo_6;
+Servo servo_7;
+
+void setup()
+{
+  servo_2.attach(2, 500, 2500);
+  servo_3.attach(3, 500, 2500);
+  servo_4.attach(4, 500, 2500);
+  servo_5.attach(5, 500, 2500);
+  servo_6.attach(6, 500, 2500);
+  servo_7.attach(7, 500, 2500);
+
+
+}
+
+void loop()
+{//first move
+    servo_2.write(180);
+    servo_3.write(180);
+     delay(1000);
+   //back to the initial point
+    servo_2.write(-180);
+    servo_3.write(-180);
+     delay(1000);
+  //second move
+    servo_2.write(180);
+    servo_3.write(180);
+      delay(1000);
+    servo_4.write(90);
+    servo_5.write(90);
+     delay(1000);
+   //back to the initial point
+    servo_2.write(-180);
+    servo_3.write(-180);
+    servo_4.write(-90);
+    servo_5.write(-90);
+     delay(1000);
+    //third move
+    servo_2.write(260);
+    servo_3.write(260);
+      delay(1000);
+    servo_4.write(90);
+    servo_5.write(90);
+       delay(1000);
+    servo_6.write(180);
+    servo_7.write(180);
+      delay(1000);
+  //back to the initial point
+    servo_2.write(-260);
+    servo_3.write(-260);
+    servo_4.write(-90);
+    servo_5.write(-90); 
+    servo_6.write(-180);
+    servo_7.write(-180);
+       delay(1000);
+}
